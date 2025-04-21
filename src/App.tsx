@@ -1,9 +1,9 @@
 import React from 'react';
 import { useRoutes } from 'react-router-dom';
 import ClientLayout from './layout/client';
-import List from './components/product/list';
-import Add from './components/product/add';
-import Edit from './components/product/edit';
+import ListProduct from './components/product/list';
+import AddProduct from './components/product/add';
+import EditProduct from './components/product/edit';
 import Login from './components/auth/login';
 import Register from './components/auth/register';
 
@@ -13,9 +13,9 @@ const App = () => {
       path: '/',
       element: <ClientLayout />,
       children: [
-        { path: '/', element: <List /> }, 
-        { path: '/add', element: <Add /> },
-        { path: '/edit/:id', element: <Edit /> },
+        { path: '/list', element: <ListProduct /> }, 
+        { path: '/add', element: <AddProduct /> },
+        { path: '/edit/:id', element: <EditProduct /> },
         { path: '/login', element: <Login /> },
         { path: '/register', element: <Register /> },
       ],
