@@ -1,27 +1,4 @@
 {
-  "animal": [
-    {
-      "id": 1,
-      "name": "Dog",
-      "species": "Canine",
-      "age": 5,
-      "weight": 30
-    },
-    {
-      "id": 2,
-      "name": "Cat",
-      "species": "Feline",
-      "age": 3,
-      "weight": 10
-    },
-    {
-      "id": 3,
-      "name": "Parrot",
-      "species": "Bird",
-      "age": 2,
-      "weight": 1
-    }
-  ],
   "books": [],
   "products": [
   ],
