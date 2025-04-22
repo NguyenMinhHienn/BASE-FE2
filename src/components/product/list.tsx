@@ -2,6 +2,9 @@ import { Table } from 'antd';
 import React from 'react';
 
 const ListProduct = () => {
+
+  
+
   const columns = [
     {
       title: 'Tên sản phẩm',

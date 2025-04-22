@@ -1,29 +1,38 @@
 import React from 'react';
-import { Form, Input, Button } from 'antd';
+import { Button } from 'antd';
 
 const AddProduct = () => {
   return (
     <div className="w-full h-screen flex justify-center items-center">
       <div className="w-1/2">
         <h1 className="text-2xl font-bold mb-4">Thêm sản phẩm</h1>
-        <Form layout="vertical">
-          <Form.Item
-            label="Tên"
-            name="name"
-            rules={[
-              { required: true, message: 'Tên không được để trống' },
-              { min: 6, message: 'Tên phải trên 6 ký tự' },
-            ]}
-          >
-            <Input />
-          </Form.Item>
-
-          <Form.Item>
+        <form className="bg-white p-6 rounded shadow-md">
+        <div>
+            <label htmlFor="title" style={{ fontWeight: 'bold' }}>Tên Sản Phẩm</label>
+            <input
+              id="title"
+              {...register("title", {
+                required: "Tên không được để trống",
+                minLength: {
+                  value: 6,
+                  message: "Tối thiểu 6 ký tự"
+                }
+              })}
+              placeholder="Nhập tên sản phẩm"
+              style={{
+                width: '100%',
+                border: 5
+              }}
+            />
+            {errors.title && <p style={{ color: 'red' }}>{errors.title.message}</p>}
+          </div>
+          
+          <div style={{ marginTop: '1rem' }}>
             <Button type="primary" htmlType="submit">
               Thêm
             </Button>
-          </Form.Item>
-        </Form>
+          </div>
+        </form>
       </div>
     </div>
   );
