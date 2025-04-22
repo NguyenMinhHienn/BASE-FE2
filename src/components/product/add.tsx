@@ -21,7 +21,9 @@ const AddProduct = () => {
               placeholder="Nhập tên sản phẩm"
               style={{
                 width: '100%',
-                border: 5
+                border: '1px solid #000',
+                padding: '8px',
+                borderRadius: '4px'
               }}
             />
             {errors.title && <p style={{ color: 'red' }}>{errors.title.message}</p>}
